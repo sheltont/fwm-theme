@@ -1,0 +1,126 @@
+/**
+ * Magento Enterprise Edition
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Magento Enterprise Edition License
+ * that is bundled with this package in the file LICENSE_EE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.magentocommerce.com/license/enterprise-edition
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     enterprise_default
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://www.magentocommerce.com/license/enterprise-edition
+ */
+/* ============================================ *
+ * Reward
+ * ============================================ */
+
+.rewards {
+    margin-bottom: $trim;
+}
+
+.reward-message {
+    background-color: $c-action;
+    display: block;
+    margin: 5px 0;
+    padding: 3px $box-spacing;
+    color: $c-text-white;
+    font-family: $f-stack-special;
+
+    &.reward-checkout {
+        margin-bottom: $box-spacing;
+    }
+
+    p {
+        display: inline;
+        font-size: $f-size-s;
+
+        &.limit {
+            display: block;
+            font-size: $f-size-xs;
+            font-style: italic;
+        }
+    }
+
+    a {
+        color: $c-text-white;
+        text-decoration: underline;
+    }
+}
+
+.my-rewards {
+    h2 {
+        position: relative;
+
+        .separator {
+            display: none;
+        }
+
+        a {
+            font-size: $f-size;
+            margin-left: $trim;
+            white-space: nowrap;
+            position: absolute;
+            top: 10px;
+        }
+    }
+
+    .box {
+        margin-bottom: 20px;
+
+        &.info-box {
+            border-bottom: 1px solid $c-module-border-light;
+            padding-bottom: $box-spacing;
+
+            dt {
+                font-weight: bold;
+                margin-bottom: 0;
+                margin-top: $box-spacing;
+                text-transform: none;
+            }
+        }
+    }
+
+    @include bp(max-width, $bp-large) {
+        h2 {
+            padding-right: 120px;
+
+            a {
+                margin-left: 0;
+                right: 0;
+            }
+        }
+
+        #reward-history {
+            small.nobr {
+                white-space: normal;
+            }
+        }
+    }
+
+    @include bp(max-width, $bp-small) {
+        #reward-history {
+            small {
+                display: none;
+            }
+
+            th.balance,
+            td.balance,
+            th.date,
+            td.date {
+                display: none;
+            }
+        }
+    }
+}
