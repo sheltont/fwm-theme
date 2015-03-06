@@ -66,6 +66,9 @@
                 <action method="addItem"><type>skin_js</type><name>js/slideshow.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>js/lib/imagesloaded.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>js/scripts.js</name></action>
+
+                <action method="addItem"><type>skin_js</type><name>js/lib/sea.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/main.js</name></action>
 		<!--
                 <action method="addLinkRel"><rel>stylesheet</rel><href>//fonts.googleapis.com/css?family=Raleway:300,400,500,700,600</href></action>
 		-->
@@ -84,7 +87,7 @@
 
                 <!-- Sets viewport meta tag using text block -->
                 <block type="core/text" name="head.viewport">
-                    <action method="setText"><text><![CDATA[<meta name="viewport" content="initial-scale=1.0, width=device-width" />]]>&#10;</text></action>
+                    <action method="setText"><text><![CDATA[<meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″>]]>&#10;</text></action>
                 </block>
             </block>
 
